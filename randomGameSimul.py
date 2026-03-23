@@ -1,5 +1,4 @@
 import random
-
 n = 3
 
 def generateBoard() :
