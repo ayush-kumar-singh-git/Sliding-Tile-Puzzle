@@ -1,5 +1,6 @@
 import random
 import heapq
+import time
 n = 3
 
 def generateBoard() :
@@ -64,6 +65,8 @@ def copyBoard(board) :
     
     return newBoard
 
+# there is some problem in this implementaion (Jumps diagonally)
+
 def bestFirstSearch(board, pos) :
     pq = []
     visited = set()
@@ -73,6 +76,7 @@ def bestFirstSearch(board, pos) :
     while pq :
         h, _, curr_board, empty = heapq.heappop(pq)
         printBoard(curr_board)
+        time.sleep(1)
         print()
         if h == 0 :
             return
